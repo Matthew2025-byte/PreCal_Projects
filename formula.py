@@ -3,8 +3,11 @@ class formula:
         self.equation = equation
         return
     
-    def unsimplified_equation(self, value):
-        return self.equation.replace("x", str(value))
+    def replace_vars(self, variables):
+        equation = self.equation
+        for key, value in variables.items():
+            equation = equation.replace(key, str(value))
+        return equation
     
-    def calculate(self, value):
-        return eval(self.unsimplified_equation(value))
+    def calculate(self, **kwargs):
+        return eval(self.replace_vars(kwargs))

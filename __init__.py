@@ -6,7 +6,7 @@ from .sequence.geometric import geometric_sequence, geometric_series
 
 class sequence(formula):
     def __getitem__(self, index):
-        return self.calculate(index)
+        return self.calculate(n=index)
 class func(formula):
     def __call__(self, value):
-        return self.calculate(value)
+        return self.calculate(value, x=value)
