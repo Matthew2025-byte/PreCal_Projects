@@ -1,4 +1,4 @@
-class arithmatic_sequence:
+class arithmetic_sequence:
     def __init__(self, equation: str, **kwargs):
         self.kwargs = kwargs
         self.equation = equation
@@ -20,17 +20,11 @@ class arithmatic_sequence:
                 continue
         return equation
     
-class arithmatic_series:
-    # Sum of an Arithmetic Series:
-    # S_n = n/2 * (a_1 + a_n)
-    ...
-class geometric_series:
-    # Sum of a Geometric Series:
-    # S_n = (a_1 * (1 - r^n)) / (1 - r)
-    ...
+
+
 
 
 def sigma(start, end, equation) -> list:
-    seq = arithmatic_sequence(equation)
+    seq = arithmetic_sequence(equation)
     equations = [seq.unsimplified_equation(i) for i in range(start, end + 1)]
     return eval("+".join(equations))
