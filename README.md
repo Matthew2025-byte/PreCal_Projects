@@ -1,7 +1,9 @@
 # Usage
 ```
-from PreCal_Projects.sequence import arithmatic_sequence
+from PreCal_Projects import arithmetic_sequence, arithmetic_series
 
-seq = arithmatic_sequence('2*(n+1)**n')
-print(seq.list_terms(1, 5))
+seq = arithmetic_sequence(6, 4.5)
+series = arithmetic_series()
+
+print(series.sum(6, (12, seq[12])))
 ```
