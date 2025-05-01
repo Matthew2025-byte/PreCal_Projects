@@ -1,6 +1,12 @@
 from .vector.vector2 import vec2
 from .vector.vector3 import vec3
-from PreCal_Projects.function.func import func
-from .sequence.sequence import arithmetic_sequence, sigma
-from .sequence.arithmetic_sequence import arithmetic_sequence
-from .sequence.geometric_sequence import geometric_sequence
+from .formula import formula
+from .sequence.arithmetic import arithmetic_sequence, arithmetic_series
+from .sequence.geometric import geometric_sequence, geometric_series
+
+class sequence(formula):
+    def __getitem__(self, index):
+        return self.calculate(index)
+class func(formula):
+    def __call__(self, value):
+        return self.calculate(value)
