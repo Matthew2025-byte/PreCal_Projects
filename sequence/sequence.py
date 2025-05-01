@@ -1,5 +1,6 @@
 class arithmatic_sequence:
-    def __init__(self, equation):
+    def __init__(self, equation: str, **kwargs):
+        self.kwargs = kwargs
         self.equation = equation
         return
     
@@ -10,8 +11,24 @@ class arithmatic_sequence:
         return [self[i] for i in range(start, start + num)]
     
     def unsimplified_equation(self, index):
-        return self.equation.replace('n', str(index))
+        self.kwargs["n"] = index
+        equation = self.equation
+        for key, value in self.kwargs.items():
+            try:
+                equation = equation.replace(key, str(value))
+            except:
+                continue
+        return equation
     
+class arithmatic_series:
+    # Sum of an Arithmetic Series:
+    # S_n = n/2 * (a_1 + a_n)
+    ...
+class geometric_series:
+    # Sum of a Geometric Series:
+    # S_n = (a_1 * (1 - r^n)) / (1 - r)
+    ...
+
 
 def sigma(start, end, equation) -> list:
     seq = arithmatic_sequence(equation)
