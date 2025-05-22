@@ -3,6 +3,7 @@ from .vector.vector3 import vec3
 from .formula import formula
 from .sequence.arithmetic import arithmetic_sequence, arithmetic_series
 from .sequence.geometric import geometric_sequence, geometric_series
+from .sequence.series import series
 from .factorial.factorial import factorial
 
 class sequence(formula):

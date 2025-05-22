@@ -10,6 +10,11 @@ class arithmetic_sequence:
     def find_start(index, value, difference):
         return (index - 1) * difference - value
     
+    @staticmethod
+    def find_difference(start, entry: tuple) -> float:
+        """entry: (index, value)"""
+        return (entry[0] - start) / (entry[1] - 1)
+    
 class arithmetic_series:
     def __init__(self) -> None:
         return

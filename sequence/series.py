@@ -1,4 +1,4 @@
-from __init__ import sequence
+from PreCal_Projects import sequence
 class series:
     def __init__(self, equation) -> None:
         self.equation = equation
